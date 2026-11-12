@@ -1,0 +1,52 @@
+name: Testzugang anfragen
+description: Klangraum nach ausdrücklicher Freigabe durch Stefan Kümmel / PaceLLM testen.
+title: "[Testanfrage] SoundTouch-Modell / Serverhardware"
+assignees: ["PaceLLM"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für dein Interesse an Klangraum! Dieses Issue ist öffentlich.
+        Bitte keine Passwörter, Geräte-IDs, Seriennummern, privaten IP-Adressen oder unbereinigten Logs angeben.
+        Das Absenden dieser Anfrage erteilt noch keine Nutzungserlaubnis. Bitte auf eine ausdrückliche Freigabe durch PaceLLM warten.
+  - type: input
+    id: model
+    attributes:
+      label: Bose-Modell und Serie
+      placeholder: "Zum Beispiel SoundTouch 30 Series III"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmwareversion, soweit bekannt
+  - type: input
+    id: server
+    attributes:
+      label: Geplanter Server
+      placeholder: "Mac / Windows / Raspberry Pi / NAS-Modell und Pythonversion"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Bediengerät und Browser
+      placeholder: "Zum Beispiel iPad mit Safari; Betriebssystemversion soweit bekannt"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Was möchtest du testen?
+      description: "Radio, Fernbedienung, Presets, Lautstärke, Multiroom oder Darstellung?"
+    validations:
+      required: true
+  - type: checkboxes
+    id: notice
+    attributes:
+      label: Hinweise gelesen
+      options:
+        - label: "Ich warte vor Installation und Tests auf die ausdrückliche Freigabe von PaceLLM."
+          required: true
+        - label: "Meine Anfrage enthält keine Zugangsdaten, privaten Netzwerkadressen oder Gerätekennungen."
+          required: true

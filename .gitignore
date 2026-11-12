@@ -1,0 +1,10 @@
+# Documentation-only repository: no software or runtime data
+.DS_Store
+.env
+.env.*
+*.key
+*.mobileconfig
+*.cer
+*.log
+*.zip
+__pycache__/

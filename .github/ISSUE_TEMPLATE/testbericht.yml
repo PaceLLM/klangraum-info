@@ -1,0 +1,25 @@
+name: Testbericht nach Freigabe
+description: Ergebnisse eines freigegebenen Tests ohne private Gerätedaten melden.
+title: "[Testbericht] Modell / Funktion"
+assignees: ["PaceLLM"]
+body:
+  - type: input
+    id: approval
+    attributes:
+      label: Zugehörige Testanfrage
+      placeholder: "Issue-Nummer oder Link, keine privaten Freigabedetails"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Modell, Firmware, Server und Browser
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Schritte, erwartetes Ergebnis und tatsächliches Ergebnis
+      description: "Keine Passwörter, Gerätekennungen, Netzwerkadressen oder unbereinigten Logs veröffentlichen."
+    validations:
+      required: true
